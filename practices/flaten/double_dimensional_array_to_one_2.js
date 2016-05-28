@@ -32,14 +32,15 @@ function doCollect(myArray, collection, i) {
   for (var j = 0; j < collection[i].length; ++j) {
     var k = 0;
 
-    while (k < length) {
+    /*while (k < length) {
       if (myArray[k] != collection[i][j]) {
         ++k;
       }
       else {
         break;
       }
-    }
+    }*/
+    while(k < length && myArray[k] != collection[i][j] && ++k);
 
     if (k >= length) {
       myArray.push(collection[i][j]);
